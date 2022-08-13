@@ -1,5 +1,5 @@
 
-public class Hash<Key extends Comparable<Key>, Value> implements HashTable {
+public abstract class Hash<Key extends Comparable<Key>, Value> implements HashTable {
 	private Node first;
 	private int cantidad=0;
     private static final int CantidadCuadro = 10;

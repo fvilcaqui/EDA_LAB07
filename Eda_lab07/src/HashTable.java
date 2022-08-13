@@ -45,7 +45,7 @@ public interface HashTable {
      * @throws NullPointerException si la clave es null
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    Integer get(String key);
+    Integer get(Integer key);
 
 
     /**
@@ -61,7 +61,7 @@ public interface HashTable {
      * @throws NullPointerException si la clave o valor son nulos
      * @throws ErrorException para otros tipos de error
      */
-    Integer put(String key, Integer value);
+    void put(Integer key, Object value);
 
     /**
      * Elimina el registro de una clave, si la clave existe 

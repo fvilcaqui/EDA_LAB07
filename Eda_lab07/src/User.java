@@ -1,27 +1,45 @@
 
 public class User {
-	private int id;
-	private String name;
+	private int key;
+	private Object value;
 	private String email;
+	 User next;
+	
+	public User(Integer key, Object value) {
+		this.key = key;
+		this.value = value;
+		next = null;
+	}
 	
 	public User() {
-		
+		next = null;
 	}
 	
 	public User(int pId, String pName, String pEmail) {
-		id = pId;
-		name = pName;
+		key = pId;
+		value = pName;
 		email = pEmail;
 	}
 		
 	@Override
 	public int hashCode() {
 	    final int prime = 31;
-	    int result = id;
+	    int result = key;
 	    result = prime * result + ((email == null) ? 0 : email.hashCode());
-	    result = prime * result + (int) (id ^ (id >>> 32));
-	    result = prime * result + ((name == null) ? 0 : name.hashCode());
+	    result = prime * result + (int) (key ^ (key >>> 32));
+	    result = prime * result + ((value == null) ? 0 : value.hashCode());
 	    return result;
+	}
+	public int getKey() {
+		return key;
+	}
+	
+	public Object getValue() {
+		return value;
+	}
+	
+	public String getEmail() {
+		return email;
 	}
 
 }
