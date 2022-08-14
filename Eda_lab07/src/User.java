@@ -38,6 +38,10 @@ public class User {
 		return value;
 	}
 	
+	public void setValue(Object valor) {
+		value = valor;
+	}
+	
 	public String getEmail() {
 		return email;
 	}

@@ -1,5 +1,5 @@
 
-public abstract class Hash<Key extends Comparable<Key>, Value> implements HashTable {
+public class Hash<Key extends Comparable<Key>, Value> implements HashTable {
 	private Node first;
 	private int cantidad=0;
     private static final int CantidadCuadro = 10;
@@ -12,7 +12,7 @@ public abstract class Hash<Key extends Comparable<Key>, Value> implements HashTa
 		return this.first == null;
 	}
 
-	public boolean containsKey(Object key) {
+	public boolean containsKey(Integer key) {
         if (key == null) throw new NullPointerException("argument to get() is null");
         return searchKey(first, key);
 	}
@@ -22,7 +22,7 @@ public abstract class Hash<Key extends Comparable<Key>, Value> implements HashTa
         return searchVal(first, value);
 	}
 
-	public Integer get(String key) {
+	public Integer get(Integer key) {
 		Node aux = this.first;
 		if ( key == null) throw new NullPointerException("argument to get() is null");
 		while(aux != null && aux.getKey().equals(key)) {
@@ -54,7 +54,7 @@ public abstract class Hash<Key extends Comparable<Key>, Value> implements HashTa
 		return null;
 	}
 
-	public Integer remove(Object key) {
+	public void remove(Object key) {
 		Node aux = this.first;
 		if (key == null) throw new NullPointerException("argument to get() is null");
 		while(aux != null && aux.getKey().equals(key)) {
@@ -67,7 +67,6 @@ public abstract class Hash<Key extends Comparable<Key>, Value> implements HashTa
 			System.out.println("El codigo ha sido eliminado exitosamente");
 			aux.setValor(null);
 		}
-		return null;
 	}
 
 	public void clear() {

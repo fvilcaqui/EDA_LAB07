@@ -23,7 +23,7 @@ public interface HashTable {
      * @throws NullPointerException si la clave es null
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    boolean containsKey(Object key);
+    boolean containsKey(Integer key);
 
     /**
      * Returns {@code true} Si la tabla contiene uno o mas registros asociados a   
@@ -73,7 +73,7 @@ public interface HashTable {
      * @throws NullPointerException si la clave es nula
      * (<a href="{@docRoot}/java/util/Collection.html#optional-restrictions">optional</a>)
      */
-    Integer remove(Object key);
+    void remove(Integer key);
 
     /**
      * Elimina todos los registros de la tabla hash
