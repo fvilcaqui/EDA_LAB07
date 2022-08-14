@@ -8,6 +8,7 @@ public class PruebasSonde {
 		hs.put(5, "Yair");
 		hs.put(18, "Javier");
 		hs.put(8, "Milagros");
+		hs.Imprimir();
 		System.out.println(hs.SearchKey(18));
 		System.out.println(hs.SearchKey(8));
 		hs.remove(8);
@@ -18,7 +19,7 @@ public class PruebasSonde {
 		hs.containsKey(20);
 		hs.containsValue("Yair");
 		hs.clear();
-		System.out.println(hs.SearchKey(20));  			
+		System.out.println(hs.SearchKey(20)); 
+		hs.Imprimir();
 	}
-
 }
