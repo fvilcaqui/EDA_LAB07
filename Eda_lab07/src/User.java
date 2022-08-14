@@ -3,7 +3,7 @@ public class User {
 	private int key;
 	private Object value;
 	private String email;
-	 User next;
+	User next;
 	
 	public User(Integer key, Object value) {
 		this.key = key;
@@ -21,7 +21,6 @@ public class User {
 		email = pEmail;
 	}
 		
-	@Override
 	public int hashCode() {
 	    final int prime = 31;
 	    int result = key;
@@ -30,6 +29,7 @@ public class User {
 	    result = prime * result + ((value == null) ? 0 : value.hashCode());
 	    return result;
 	}
+	
 	public int getKey() {
 		return key;
 	}
